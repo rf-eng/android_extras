@@ -8,10 +8,13 @@ apply plugin: "com.android.library"
 
 //noinspection GroovyAssignabilityCheck
 dependencies {
-    compile "org.ros.rosjava_core:rosjava:[0.3,0.4)"
-    compile "org.ros.rosjava_messages:sensor_msgs:[1.12,1.13)"
-    compile "com.github.rosjava.rosjava_extras:image:[0.3,0.4)"
-    compile group: 'org.opencv', name: 'openCVLibrary', version: '3.4.0'
+    implementation "org.ros.rosjava_core:rosjava:[0.3,0.4)"
+    implementation "org.ros.rosjava_messages:sensor_msgs:[1.12,1.13)"
+    implementation "com.github.rosjava.rosjava_extras:image:[0.3,0.4)"
+    implementation group: 'org.opencv', name: 'openCVLibrary', version: '3.4.0'
+    implementation 'com.android.tools.build:aapt2:4.1.2-6503028'
+    implementation "org.ros.rosjava_bootstrap:message_generation:0.3.3"
+    implementation 'org.ros.rosjava_messages:std_msgs:0.5.11'
 }
 
 

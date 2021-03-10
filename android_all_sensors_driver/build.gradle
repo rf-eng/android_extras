@@ -17,10 +17,15 @@
 
 apply plugin: "com.android.application"
 
+// see: https://github.com/rosjava/android_extras/issues/27
 //noinspection GroovyAssignabilityCheck
 dependencies {
-    compile 'org.ros.android_core:android_core_components:[0.4,0.5)'
-    compile group: 'org.opencv', name: 'openCVLibrary', version: '3.4.0'
+    implementation 'org.ros.android_core:android_core_components:[0.4,0.5)'
+    implementation group: 'org.opencv', name: 'openCVLibrary', version: '3.4.0'
+    implementation 'org.ros.rosjava_messages:std_msgs:0.5.11'
+    implementation "org.ros.rosjava_bootstrap:message_generation:0.3.3"
+    implementation "org.apache.commons:com.springsource.org.apache.commons.logging:[1.1.1,1.2)"
+    implementation 'org.ros.rosjava_messages:geometry_msgs:[1.12, 1.13)'
 }
 
 android {
